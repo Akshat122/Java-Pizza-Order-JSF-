@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Pizza Ordering Form</title>
+    </h:head>
+    <h:body><div style="margin-left: 30%">
+        <h:form>
+            <h1 style="margin-left: 10%;">Online Pizza Ordering System</h1>
+            <h:panelGrid columns="6" width="100%" style="margin-left: -15%;">
+                <h:outputLabel value="First Name:"/>
+                <h:inputText id="fName"  value="#{pizza.firstName}"/>
+                <h:outputLabel value="Middle Name"/>
+                <h:inputText id="mi"  value="#{pizza.mi}"/>
+                <h:outputLabel value="Last Name:"/>
+                <h:inputText id="lName"  value="#{pizza.lastName}"/> 
+                
+                <h:outputLabel value="Phone Number:"/>
+                <h:inputText id="pnumber"  value="#{pizza.pnumber}"/> 
+                   
+                <h:outputLabel value="Email Id:"/>
+                <h:inputText id="email" value="#{pizza.email}"/> 
+               
+                <h:outputLabel value="Address Line 1:"/>
+                <h:inputText id="addressline1" value="#{pizza.addressline1}"/> 
+                
+                <h:outputLabel value="Address Line 2:"/>
+                <h:inputText id="addressline2"  value="#{pizza.addressline2}"/> 
+                
+                <h:outputLabel value="City:"/>
+                <h:inputText id="city"  value="#{pizza.city}"/> 
+                
+                <h:outputLabel value="Pin:"/>
+                <h:inputText id="pin"  value="#{pizza.pin}"/> 
+                
+            </h:panelGrid>
+            <br/>
+            <h:panelGrid columns="1" style="color:blue">
+                <h:outputLabel value="Pizza Size: " style="font-size: 50px;" /> 
+               
+               <h:selectOneRadio id="psize" value="#{pizza.psize}" >
+                   <f:selectItem itemLabel="Small (Rs. 500)" itemValue="Small"/>
+                   <f:selectItem itemLabel="Medium (Rs. 750)" itemValue="Medium"/>
+                   <f:selectItem itemLabel="Large (Rs. 1000)" itemValue="Large"  />
+               </h:selectOneRadio>
+            </h:panelGrid>
+            <br/>
+            <h:panelGrid columns="4" style="color:black">
+                
+                
+              <h:selectBooleanCheckbox id="mushrooms_Radio" value="#{pizza.mushroomR}" >
+                      <f:selectItem itemValue="Mushroom "/>
+                      
+              </h:selectBooleanCheckbox>
+                 <h:outputLabel>Mushroom</h:outputLabel>
+               
+                 <h:selectOneRadio id="mushrooms" value="#{pizza.mushrooms}" >
+                   <f:selectItem itemLabel="S(Rs. 100)" itemValue="100"/>
+                   <f:selectItem itemLabel="M(Rs. 125)" itemValue="125"/>
+                   <f:selectItem itemLabel="L(Rs. 150)" itemValue="150"/>
+                   <f:selectItem itemLabel="None" itemValue="0"/>
+               </h:selectOneRadio>
+                </h:panelGrid>
+            
+            <h:panelGrid columns="4" style="color:black">
+                <h:selectBooleanCheckbox id="redpeppers_Radio" value="#{pizza.redpepperR}">
+                      <f:selectItem itemValue="Red Peppers "/>
+                      
+                 </h:selectBooleanCheckbox>
+                  <h:outputLabel>Red Peppers</h:outputLabel>
+             
+                <h:selectOneRadio id="redpeppers" value="#{pizza.redpeppers}">
+                   <f:selectItem itemLabel="S(Rs. 100)" itemValue="100"/>
+                   <f:selectItem itemLabel="M(Rs. 120)" itemValue="120"/>
+                   <f:selectItem itemLabel="L(Rs. 140)" itemValue="140"/>
+                   <f:selectItem itemLabel="None" itemValue="0"/>
+               </h:selectOneRadio>
+                 </h:panelGrid>
+            <h:panelGrid columns="4" style="color:black">
+                 <h:selectBooleanCheckbox id="greenolives_Radio" value="#{pizza.greenoliveR}">
+                      <f:selectItem itemValue="Green Olives "/>
+                      
+                  </h:selectBooleanCheckbox>
+                 <h:outputLabel>Green Olives</h:outputLabel>
+                <h:selectOneRadio id="greenolives" value="#{pizza.greenolives}" >
+                   <f:selectItem itemLabel="S(Rs. 100)" itemValue="100"/>
+                   <f:selectItem itemLabel="M(Rs. 150)" itemValue="150"/>
+                   <f:selectItem itemLabel="L(Rs. 200)" itemValue="200"/>
+                   <f:selectItem itemLabel="None" itemValue="0"/>
+               </h:selectOneRadio>
+                </h:panelGrid>
+            <h:panelGrid columns="4" style="color:black">
+                 <h:selectBooleanCheckbox id="pineapple_Radio" value="#{pizza.pineappleR}">
+                      <f:selectItem itemValue="Pineapple "/>
+                     
+                  </h:selectBooleanCheckbox>
+               <h:outputLabel>Pineapple</h:outputLabel>
+                <h:selectOneRadio id="pineapple" value="#{pizza.pineapple}">
+                   <f:selectItem itemLabel="S(Rs. 60)" itemValue="60"/>
+                   <f:selectItem itemLabel="M(Rs. 90)" itemValue="90"/>
+                   <f:selectItem itemLabel="L(Rs. 120)" itemValue="120"/>
+                   <f:selectItem itemLabel="None" itemValue="0" />
+               </h:selectOneRadio>
+                </h:panelGrid>
+            <h:panelGrid columns="4" style="color:black">
+                 <h:selectBooleanCheckbox id="broccoli_Radio" value="#{pizza.broccoliR}">
+                      <f:selectItem itemValue="Broccoli "/>
+                     
+                  </h:selectBooleanCheckbox>
+                  <h:outputLabel>Broccoli</h:outputLabel>
+                <h:selectOneRadio id="broccoli" value="#{pizza.broccoli}"  >
+                   <f:selectItem itemLabel="S(Rs. 75)" itemValue="75"/>
+                   <f:selectItem itemLabel="M(Rs. 125)" itemValue="125"/>
+                   <f:selectItem itemLabel="L(Rs. 150)" itemValue="150"/>
+                   <f:selectItem itemLabel="None" itemValue="0"/>
+               </h:selectOneRadio>
+                </h:panelGrid>
+            <h:panelGrid columns="4" style="color:black">
+                 <h:selectBooleanCheckbox id="blackolives_Radio" value="#{pizza.blackoliveR}">
+                      <f:selectItem itemValue="Black Olives "/>
+                      
+                  </h:selectBooleanCheckbox>
+                  <h:outputLabel>Black Olives</h:outputLabel>
+                <h:selectOneRadio id="blackolives" value="#{pizza.blackolives}">
+                   <f:selectItem itemLabel="S(Rs. 100)" itemValue="100"/>
+                   <f:selectItem itemLabel="M(Rs. 150)" itemValue="150"/>
+                   <f:selectItem itemLabel="L(Rs. 200)" itemValue="200"/>
+                   <f:selectItem itemLabel="None" itemValue="0"/>
+               </h:selectOneRadio>
+                
+                
+            </h:panelGrid>
+            
+            <h:commandButton value="Generate Bill" style="margin-left: 25%" />
+            <h:outputText escape="false"  value="#{pizza.response}"/>
+        </h:form>
+            </div>
+    </h:body>
+</html>
+
